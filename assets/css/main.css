@@ -4004,9 +4004,9 @@ input, select, textarea {
 	body.is-mobile #main > header {
 		background-attachment: scroll;
 	}
-#two h2 {
+#two {
 	text-align: center;
-	padding-top: 64px 0;
+	padding: 64px 0;
 }
 
 /* Location Container */
@@ -4045,6 +4045,36 @@ input, select, textarea {
 .location p {
 	padding: 44px 0;
 	margin: 0;
+}
+
+/* Mobile Location */
+
+.mobile-location {
+	display: none;
+}
+
+@media  screen and (max-width: 736px) {
+	.mobile-location {
+		display: block;
+	}
+
+	.loc-contain {
+		flex-direction: column;
+		align-items: center;
+		padding: 10px;
+	}
+	.location {
+		width: 90%;
+		padding: 0 10px;
+	}
+
+	.active {
+		display: block;
+	}
+
+	.hidden {
+		display: none;
+	}
 }
 /* Map */
 	.map-sect{

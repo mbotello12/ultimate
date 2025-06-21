@@ -42,6 +42,30 @@
 			});
 
 		}
+	// Mobile-location
+	const ultimate= document.querySelector("#ultimate")
+	const adobe = document.querySelector("#adobe")
+	const west = document.querySelector("#west")
+
+	document.querySelector("#showUltimate").addEventListener('click', showUltimate)
+	document.querySelector("#showAdobe").addEventListener('click', showAdobe)
+	document.querySelector("#showWest").addEventListener('click', showWest)
+
+	function showUltimate() {
+		ultimate.classList.toggle('hidden')
+		adobe.classList.add('hidden')
+		west.classList.add('hidden')
+	}
+	function showAdobe() {
+		ultimate.classList.add('hidden')
+		adobe.classList.toggle('hidden')
+		west.classList.add('hidden')
+	}
+	function showWest() {
+		ultimate.classList.add('hidden')
+		adobe.classList.add('hidden')
+		west.classList.toggle('hidden')
+	}
 
 	// Scrolly.
 		$('.scrolly')
