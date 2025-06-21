@@ -178,6 +178,7 @@ input, select, textarea {
 			color: inherit;
 			text-decoration: none;
 		}
+	
 
 	h2 {
 		font-size: 1.35em;
@@ -3521,7 +3522,7 @@ input, select, textarea {
 			position: absolute;
 			right: 0;
 			top: 0;
-			vertical-align: middle;
+			
 			width: 7em;
 		}
 
@@ -3575,6 +3576,8 @@ input, select, textarea {
 			line-height: inherit;
 			position: absolute;
 			top: 0;
+			font-size: 1.25em;
+			margin: 0;
 		}
 
 			#header h1 a {
@@ -3693,6 +3696,7 @@ input, select, textarea {
 		position: relative;
 		text-align: center;
 	}
+	
 
 		#banner h2 {
 			-moz-transform: scale(1);
@@ -3709,6 +3713,7 @@ input, select, textarea {
 			padding: 0.35em 1em;
 			position: relative;
 			z-index: 1;
+			
 		}
 
 			#banner h2:before, #banner h2:after {
@@ -3740,12 +3745,14 @@ input, select, textarea {
 
 		#banner p {
 			letter-spacing: 0.225em;
-			text-transform: uppercase;
+			text-transform: uppercase;			
 		}
 
 			#banner p a {
 				color: inherit;
 			}
+
+		
 
 		#banner .more {
 			-moz-transition: -moz-transform 0.75s ease, opacity 0.75s ease;
@@ -3813,6 +3820,7 @@ input, select, textarea {
 			top: 0;
 			opacity: 0;
 		}
+		
 
 		@media screen and (max-width: 736px) {
 
@@ -3859,6 +3867,11 @@ input, select, textarea {
 		opacity: 1;
 	}
 
+	
+	
+
+
+	
 /* CTA */
 
 	#cta .inner {
@@ -3916,6 +3929,7 @@ input, select, textarea {
 			#cta .inner .actions {
 				max-width: none;
 			}
+			
 
 		}
 
@@ -3990,6 +4004,48 @@ input, select, textarea {
 	body.is-mobile #main > header {
 		background-attachment: scroll;
 	}
+#two h2 {
+	text-align: center;
+	padding-top: 64px 0;
+}
+
+/* Location Container */
+
+.loc-contain {
+	display: flex;
+	justify-content: space-evenly;
+	padding-bottom: 44px;
+}
+
+
+/* Locations */
+
+.location {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	border: 1px solid #f0f0f0;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px #000;
+	margin: 15px 0;
+	padding: 0 15px;
+}
+
+.location iframe {
+	width: 100%;
+	height: 450;
+}
+.location h3 {
+	margin: 0;
+	padding: 15px;
+	text-align: center;
+}
+.location p {
+	padding: 44px 0;
+	margin: 0;
+}
 /* Map */
 	.map-sect{
 		position: relative;
@@ -4005,6 +4061,10 @@ input, select, textarea {
 		text-align: center;
 		
 	}
+	.map {
+		width: 50%;
+		height: 400px;
+	}
 	@media screen and (max-width: 1024px){
 		.map-sect{
 			position: relative;
@@ -4017,6 +4077,10 @@ input, select, textarea {
 			flex-direction: column-reverse;
 			align-items: center;
 			justify-items: center;
+		}
+		.map {
+			width: 100%;
+			height: 275px;
 		}
 	}
 	
@@ -4141,7 +4205,7 @@ input, select, textarea {
 			font-size: 1.5em;
 		}
 		#footer img{
-			width: 30%;
+			width: 25%;
 		}
 
 			#footer .icons a {
@@ -4265,130 +4329,79 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
-	main{
+	.container{
 		display: flex;
-		
+		width: 100%;
+		justify-content: space-around;
+		flex-wrap: wrap;
 	  }
 	
 	  .storage-size{
-		height:500px;
-		width: 12%;
 		display: flex;
-	  }
-	  .question {
-		border:1px solid black;
-		box-shadow: 15px 20px #2E3842;
-		height: 469px;
-		width: 90%;
-		background-image: url("");
-		background-repeat:no-repeat;
-		background-size:contain;
-		background-position: center;
-		
-	  }
-	  .storage-size ul{
-		display:flex;
-		flex-direction: column; 
-	  }
-	  .storage-size ul li{
-		border:1px solid black;
-		border-radius: 50%;
-		background: #2e3842;
-		color: white;
-		list-style:none;
-		height:100px;
-		width:100%;
-		cursor: pointer;
-		display:flex;
+		flex-direction: column;
 		justify-content: center;
-		align-items:center;
-		padding: 0 13px;
+		align-items: center;
+		width: 45%;
+		border: 1px solid black;
+		border-radius: 10px;
+		padding: 24px;
+		margin: 22px 0;
 	  }
-
-	  @media screen and (max-width: 930px){
-		main{
-			display: flex;
+	  .storage-size h3{
+		font-size:1.25em;
+	  }
+	  .storage-size ul {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	  }
+	  .storage-size ul li {
+		width: 33%;
+	  }
+	  @media (min-width: 800px) and (max-width: 1280px) {
+		.storage-size img {
+			width: 85%;
 			
 		  }
-		
-		  .storage-size{
-			height:500px;
-			width: 20%;
-			display: flex;
-		  }
-		  .question {
-			border:1px solid black;
-			box-shadow: 15px 20px #2E3842;
-			height: 469px;
-			width: 90%;
-			background-image: url("");
-			background-repeat:no-repeat;
-			background-size:contain;
-			background-position: center;
-			
-		  }
-		  .storage-size ul{
-			display:flex;
-			flex-direction: column; 
-		  }
-		  .storage-size ul li{
-			border:1px solid black;
-			border-radius: 50%;
-			background: #2e3842;
-			color: white;
-			list-style:none;
-			height:100px;
-			width:100%;
-			cursor: pointer;
-			display:flex;
-			justify-content: center;
-			align-items:center;
-			padding: 0 13px;
-		  }
 	  }
-	  @media screen and (max-width: 736px) {
+	  
+	  
+	  @media screen and (max-width: 799px) {
 		
 		.wrapper.style5 {
 			background-color: rgb(236, 236, 236);
 			color: rgb(78, 72, 82);
 			padding: 4em 1em;
 		}
-		main{
+		.container{
 			display: flex;
 			flex-direction: column;
 		  }
 		
 		  .storage-size{
 			width: 100%;
-			height: 250px;
 			
 		  }
-		  .question {
-			border:1px solid black;
-			height: 200px;
+		  .storage-size h3{
+			font-size:1.25em;
+		  }
+		  .storage-size img {
 			width: 100%;
-			background-image: url("");
-			background-repeat:no-repeat;
-			background-size:360px;
-			background-position: center;
 			
 		  }
+		
 		  .storage-size ul{
 			display:flex;
+			flex-direction: row;
     		flex-wrap:wrap;
-			width: 50%;
-			
-			
-		  }
-		  .storage-size ul li{
-			border:1px solid black;
-			border-radius: 50%;
-			background: #2e3842;
-			color: white;
-			height:55px;
 			width: 100%;
+			
+			
 		  }
-
+		  .storage-size ul li {
+			width: 50%;
+		  }
 		
 	  }
 	  
